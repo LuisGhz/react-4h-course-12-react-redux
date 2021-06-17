@@ -12,7 +12,7 @@ const decrement = () => ({ type: 'DECREMENT' });
 
 // Create reducers
 const counterReducer = (state = 0, action) => {
-  switch(action) {
+  switch(action.type) {
     case 'INCREMENT':
       return state + 1;
     case 'DECREMENT':
