@@ -6,9 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
 
 // Create actions
-const increment = () => ({ type: 'INCREMENT' });
+const increment = value => ({ type: 'INCREMENT', payload: value });
 
-const decrement = () => ({ type: 'DECREMENT' });
+const decrement = value => ({ type: 'DECREMENT', payload: value });
 
 // Create reducers
 const counterReducer = (state = 0, action) => {
