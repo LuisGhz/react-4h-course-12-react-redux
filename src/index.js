@@ -14,9 +14,9 @@ const decrement = value => ({ type: 'DECREMENT', payload: value });
 const counterReducer = (state = 0, action) => {
   switch(action.type) {
     case 'INCREMENT':
-      return state + 1;
+      return state + action.payload;
     case 'DECREMENT':
-      return state - 1;
+      return state - action.payload;
     default:
       return state;
   }
@@ -31,7 +31,7 @@ store.subscribe(() => {
 });
 
 // Dispatch action
-store.dispatch(increment());
+store.dispatch(increment(5));
 
 ReactDOM.render(
   <React.StrictMode>
